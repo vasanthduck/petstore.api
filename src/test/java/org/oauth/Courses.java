@@ -10,7 +10,7 @@ public class Courses {
 	
 @Test(priority=1)
 public void codeurl() {
-String url = "https://rahulshettyacademy.com/getCourse.php?code=4%2F0AdQt8qgY_pkF-5s0dqP7ZqGQA7Xzc0_uDQqhfAEUgI8Rc9-O_pF6LjE7hK6QkI4aT2gVFQ&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none";
+String url = "";
 String[] s = url.split("code=");
 s1= s[1].split("&scope=");
 }
@@ -36,29 +36,17 @@ public void getresponse() {
 	JsonPath j = new JsonPath(responces);
 	int web = j.get("courses.webautomation.size()");
 	for (int i = 0; i < web; i++) {
-		System.out.println(j.get("courses.webautomation["+i+"]).0"));
-		System.out.println(j.get("courses.webautomation["+i+"].1"));
-		System.out.println(j.get("courses.webautomation["+i+"].2"));
-		System.out.println(0);
-		System.out.println(1);
-		System.out.println(2);
-		System.out.println(web);
+		System.out.println(j.get("courses.webautomation["+i+"]).courseTitle"));
 		
 	}
 	int web1 = j.get("courses.api.size()");
 	for (int k = 0; k < web; k++) {
-		System.out.println(j.get("courses.api["+k+"]).0"));
-		System.out.println(j.get("courses.api["+k+"].1"));
-		System.out.println(j.get("courses.api["+k+"].2"));
-		System.out.println(web1);
+		System.out.println(j.get("courses.api["+k+"]).courseTitle"));
 		
 	}
 	int web2 = j.get("courses.webautomation.size()");
 	for (int m = 0; m < web; m++) {
-		System.out.println(j.get("courses.mobile["+m+"]).0"));
-		System.out.println(j.get("courses.mobile["+m+"].1"));
-		System.out.println(j.get("courses.mobile["+m+"].2"));
-		System.out.println(web2);
+		System.out.println(j.get("courses.mobile["+m+"]).courseTitle"));
 		
 	}
 }
