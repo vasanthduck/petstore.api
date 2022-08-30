@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.petstore.RestServices">
+      <class name="org.oauth.Courses">
         <methods>
-          <include name="addpet" invocation-numbers="0"/>
+          <include name="getresponse"/>
         </methods>
-      </class> <!-- org.petstore.RestServices -->
+      </class> <!-- org.oauth.Courses -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
